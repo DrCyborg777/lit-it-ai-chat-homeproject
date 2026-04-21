@@ -101,6 +101,25 @@ body {
   padding: 4px;
 }
 
+.clear-chat-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 8px 16px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.clear-chat-btn:hover {
+  background: #dc2626;
+}
+
 /* CHAT AREA */
 .chat-container {
   width: 100%;
@@ -109,6 +128,7 @@ body {
 }
 
 .chat-card {
+  position: relative;
   width: 100%;
   max-width: 900px;
   margin: 20px auto;

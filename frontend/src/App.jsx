@@ -18,6 +18,15 @@ function App() {
   const inputRef = useRef(null);                                 // Reference to input field
 
   // =====================================================
+  // CLEAR ALL CONVERSATION
+  // =====================================================
+  const clearChat = () => {
+    setConversationHistory([]);
+    setAiResponse("");
+    setSearch("");
+  };
+
+  // =====================================================
   // FETCH AI RESPONSE
   // =====================================================
   /**
@@ -109,14 +118,11 @@ function App() {
           {/* Search Icon */}
           <IoSearch className="search-icon" size={18} />
 
-          {/* Clear Button (shows only when there's text) */}
+          {/* Clear Input Button (shows only when there's text) */}
           {search && (
             <button 
               className="clear-btn"
-              onClick={() => {
-                setSearch("");
-                setAiResponse("");
-              }}
+              onClick={() => setSearch("")}
               aria-label="Clear search"
             >
               <IoClose/>
@@ -128,6 +134,18 @@ function App() {
       {/* ========== CHAT DISPLAY ========== */}
       <div className="chat-container">
         <div className="chat-card">
+          
+          {/* Clear Chat Button (top right) - shows only when there's conversation */}
+          {conversationHistory.length > 0 && (
+            <button 
+              className="clear-chat-btn"
+              onClick={clearChat}
+              aria-label="Clear conversation"
+            >
+              Clear Chat
+            </button>
+          )}
+
           <div className="chat-content">
             
             {/* Display conversation history */}
@@ -164,8 +182,8 @@ function App() {
       <footer className="footer">
         <div className="copyright">
           <span className="copyright-year">Copyright © 2026</span>{" "}
-          <span className="copyright-name">Earl.</span>{" "}
-          <span className="copyright-rights">All rights reserved.</span>
+          <span className="copyright-name">Erlandas.</span>{" "}
+          <span className="copyright-rights">Built for educational purposes.</span>
         </div>
       </footer>
     </div>
