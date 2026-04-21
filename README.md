@@ -1,11 +1,11 @@
-# 🤖 LIT_IT AI Chat Assistant (HomeProject)
+## 🤖 LIT_IT AI Chat Assistant (HomeProject)
 
 A full-stack AI chat application built as part of an AI course project.  
 It uses a FastAPI backend, React frontend, and Ollama (LLaMA3) for local AI responses.
 
 ---
 
-## 📌 Features
+### 📌 Features
 
 - 💬 Real-time AI chat with streaming responses
 - 🧠 Conversation memory (context-aware replies)
@@ -16,7 +16,7 @@ It uses a FastAPI backend, React frontend, and Ollama (LLaMA3) for local AI resp
 
 ---
 
-## 🧱 Tech Stack
+### 🧱 Tech Stack
 
 **Backend:**
 - Python
@@ -36,7 +36,8 @@ It uses a FastAPI backend, React frontend, and Ollama (LLaMA3) for local AI resp
 
 ---
 
-## 📁 Project Structure
+### 📁 Project Structure
+```
 project-LIT_IT/
 │
 ├── backend/
@@ -52,19 +53,20 @@ project-LIT_IT/
 │
 ├── .gitignore
 └── README.md
-
+```
 
 ---
 
-## ⚙️ Setup Instructions
+### ⚙️ Setup Instructions
 
-### 1. Clone the project
+1. Clone the project
 ```bash
 git clone https://github.com/YOUR_USERNAME/lit-it-ai-chat-homeproject.git
 cd lit-it-ai-chat-homeproject
 ```
 
 🖥️ Backend Setup (FastAPI)
+
 2. Create virtual environment
 ```bash
 cd backend
@@ -111,7 +113,7 @@ This project uses a local AI model via Ollama.
 
 7. Install & run model
 
-Install Ollama:
+Download and Install Ollama:
 ```bash
 https://ollama.com/
 ```
@@ -123,6 +125,7 @@ ollama pull llama3
 ```
 
 Run automatically (or it starts in background after install).
+
 
 🔗 How It Works
 1. User sends a message from React UI
